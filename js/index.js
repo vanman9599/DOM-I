@@ -90,15 +90,18 @@ contactNode[2].textContent = siteContent['contact']['email'];
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
 
+const end = document.createElement("a");
+const front = document.createElement("a");
+
+const parent = document.querySelector('header nav');
+
+parent.appendChild(end);
+parent.prepend(front);
+front.textContent = "Donate";
+end.textContent = "FAQ";
+
+
 const navList = document.querySelectorAll('a');
 navList.forEach(function(aTag){
   aTag.style.color = "green";
 });
-
-
-
-// const front = document.createElement("a");
-// document.nav.appendChild(front);
-// front.textContent
-// var p = document.createElement("p");
-//document.body.appendChild(p);
