@@ -50,7 +50,7 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 const nav1 = document.querySelectorAll('nav a');
 navArray = Array.from(nav1);
 for(let i =0;i<navArray.length; i++){
-  navArray[i].textContent = siteContent['nav']['nav-item-' + i];
+  navArray[i].textContent = siteContent['nav']['nav-item-' + (i+1)];
 }
 
 
@@ -90,3 +90,15 @@ contactNode[2].textContent = siteContent['contact']['email'];
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
 
+const navList = document.querySelectorAll('a');
+navList.forEach(function(aTag){
+  aTag.style.color = "green";
+});
+
+
+
+// const front = document.createElement("a");
+// document.nav.appendChild(front);
+// front.textContent
+// var p = document.createElement("p");
+//document.body.appendChild(p);
